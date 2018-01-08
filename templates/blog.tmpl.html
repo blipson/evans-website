@@ -1,0 +1,64 @@
+<html>
+{{template "header.tmpl.html"}}
+
+<body>
+    {{template "nav.tmpl.html"}}
+    <section class="hero is-medium has-text-centered full-height">
+
+        <div class="hero-body" id="bckgrd-img">
+            <div class="container">
+                <div id="bulma" class="columns">
+                    <div class="column" style="padding: 75px; height: 50%">
+                        <a href="/blog/ontechnology" class="card" style="cursor: pointer; display: block;">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="/static/technocracy.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content" style="text-align: center;">
+                                        <p class="title is-4">On Technology</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    Technological progress is simultaneously the driving force behind modern capitalism, and our only potential salvation from
+                                    it. So how can we use it correctly? What do we need to change before we can begin work
+                                    in earnest?
+                                    <br>
+                                    <time datetime="2016-1-1">8:30 PM - 08 Nov 2017</time>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+<script type="text/javascript">
+    (function () {
+        'use strict';
+        var items = document.querySelectorAll(".timeline li");
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                    items[i].classList.add("in-view");
+                }
+            }
+        }
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    })();
+</script>
+
+</html>

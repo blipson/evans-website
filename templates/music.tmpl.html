@@ -1,0 +1,47 @@
+<html>
+  {{template "header.tmpl.html"}}
+  <body>
+    {{template "nav.tmpl.html"}}
+    <section class="hero is-medium has-text-centered full-height">
+      <div class="hero-body" id="bckgrd-img">
+        <div class="container">
+            <div class="columns">
+                <div class="column"></div>
+                <div class="column">
+                    <iframe height="380" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/8361037&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                </div>
+                <div class="column">
+                    <iframe src="https://open.spotify.com/embed/user/invictus123/playlist/6Iw3msawqZXSZO9Vz1C7OC" height="380" frameborder="0" allowtransparency="true"></iframe>
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script type="text/javascript">
+      (function() {
+          'use strict';
+          var items = document.querySelectorAll(".timeline li");
+          function isElementInViewport(el) {
+              var rect = el.getBoundingClientRect();
+              return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+              );
+          }
+          function callbackFunc() {
+              for (var i = 0; i < items.length; i++) {
+                  if (isElementInViewport(items[i])) {
+                      items[i].classList.add("in-view");
+                  }
+              }
+          }
+          window.addEventListener("load", callbackFunc);
+          window.addEventListener("resize", callbackFunc);
+          window.addEventListener("scroll", callbackFunc);
+      })();
+  </script>
+</html>

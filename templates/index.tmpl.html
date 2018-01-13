@@ -1,40 +1,47 @@
 <html>
-  {{template "header.tmpl.html"}}
-  <body>
+{{template "header.tmpl.html"}}
+
+<body>
     {{template "nav.tmpl.html"}}
     <section class="hero is-medium has-text-centered full-height">
-      <div class="hero-body" id="bckgrd-img">
-        <div class="container">
-          <h1 id="bulma" class="title white-with-outline" style="font-size: 75;">
-            Evan Coulter
-          </h1>
+        <div class="hero-body" id="bckgrd-img">
+            <div class="container" style="background-color: rgba(23, 36, 170, 0.5);  border-radius: 25px;
+            padding: 20px; ">
+                <h1 id="bulma" class="title white-with-outline" style="font-size: 75;">
+                    Evan Coulter
+                </h1>
+                <h6 id="bulma" class="title white-with-outline" style="font-size: 24;">
+                        Hey my name's Evan! I'm a real sweet piece o pie! Come have a taste, if you're ready for me bb. I'm hungry for responsibility,
+                        horny for teamwork, and filled with... you know ;-).
+                    </h6>
+            </div>
         </div>
-      </div>
     </section>
-  </body>
-  <script type="text/javascript">
-      (function() {
-          'use strict';
-          var items = document.querySelectorAll(".timeline li");
-          function isElementInViewport(el) {
-              var rect = el.getBoundingClientRect();
-              return (
-                  rect.top >= 0 &&
-                  rect.left >= 0 &&
-                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-              );
-          }
-          function callbackFunc() {
-              for (var i = 0; i < items.length; i++) {
-                  if (isElementInViewport(items[i])) {
-                      items[i].classList.add("in-view");
-                  }
-              }
-          }
-          window.addEventListener("load", callbackFunc);
-          window.addEventListener("resize", callbackFunc);
-          window.addEventListener("scroll", callbackFunc);
-      })();
-  </script>
+</body>
+<script type="text/javascript">
+    (function () {
+        'use strict';
+        var items = document.querySelectorAll(".timeline li");
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                    items[i].classList.add("in-view");
+                }
+            }
+        }
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    })();
+</script>
+
 </html>

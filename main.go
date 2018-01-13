@@ -28,6 +28,10 @@ func main() {
 		c.HTML(http.StatusOK, "blog.tmpl.html", nil)
 	})
 
+	router.GET("/blog/cellphones", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "cellphones.tmpl.html", nil)
+	})
+
 	router.GET("/music", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "music.tmpl.html", nil)
 	})

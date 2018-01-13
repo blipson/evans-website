@@ -69,6 +69,17 @@
   color: black;
 }
 
+#black-boi {
+  width: 200px;
+  font-size: 150%;
+  color: black;
+}
+
+#black-boi:hover {
+  background-color: #ffffff;
+  color: #cccccc;
+}
+
 .center-align {
   display: flex;
   justify-content: center;
